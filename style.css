@@ -1,0 +1,118 @@
+/* Importa as fontes do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Lato:wght@400;700&display=swap');
+
+/* Estilos gerais da página */
+body {
+    background: linear-gradient(135deg, #fce3ec, #ffc0cb); /* Fundo em gradiente rosa suave */
+    font-family: 'Lato', sans-serif; /* Fonte padrão para os textos */
+    color: #333;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+/* O "cartão" principal que contém tudo */
+.card-container {
+    background-color: rgba(255, 255, 255, 0.95); /* Fundo branco com leve transparência */
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    width: 100%;
+    padding: 40px;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in-out;
+}
+
+/* Animação de entrada suave */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Título Principal */
+header h1 {
+    font-family: 'Playfair Display', serif; /* Fonte elegante para o título */
+    font-size: 2.8em;
+    color: #d6336c; /* Cor rosa mais forte */
+    margin-bottom: 20px;
+}
+
+/* Parágrafos de texto */
+main p {
+    font-size: 1.1em;
+    line-height: 1.7;
+    text-align: justify; /* Alinha o texto para ficar mais organizado */
+    margin-bottom: 20px;
+}
+
+.intro, .closing {
+    text-align: center;
+}
+
+/* Título da galeria de fotos */
+h2 {
+    font-family: 'Playfair Display', serif;
+    color: #e677a2;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 2em;
+}
+
+/* Galeria de fotos */
+.gallery {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Espaço entre as fotos */
+    flex-wrap: wrap; /* Permite que as fotos quebrem a linha em telas menores */
+    margin-bottom: 30px;
+}
+
+.gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover; /* Garante que a foto preencha o espaço sem distorcer */
+    border-radius: 15px;
+    border: 4px solid #fff;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Efeito ao passar o mouse sobre a foto */
+.gallery img:hover {
+    transform: scale(1.05) rotate(2deg); /* Aumenta e gira levemente */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Rodapé com a sua assinatura */
+footer p {
+    font-size: 1.2em;
+    font-style: italic;
+    color: #555;
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* Deixar o site bonito em celulares */
+@media (max-width: 600px) {
+    .card-container {
+        padding: 20px;
+    }
+
+    header h1 {
+        font-size: 2.2em;
+    }
+
+    .gallery img {
+        width: 100%; /* Em telas pequenas, cada foto ocupa a largura total */
+        height: auto;
+    }
+}
